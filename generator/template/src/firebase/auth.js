@@ -1,5 +1,7 @@
 import store from '../store'
-import firebase from "firebase";
+import firebase from "firebase/app";
+import "firebase/auth";
+import subsc from './subsc'
 
 console.log('** auth', store.state)
 
@@ -21,10 +23,12 @@ if (store.state.ON_LINE) {
           }
         })
       
-        store.dispatch('querySnapshot')
-        store.dispatch('queryPoints')
-        store.dispatch('gps_watch')
+        // store.dispatch('querySnapshot')
+        // store.dispatch('queryPoints')
+        // store.dispatch('gps_watch')
 
+        subsc()
+        
     } else {
       store.commit('updateState', {'user': {}})
     }
