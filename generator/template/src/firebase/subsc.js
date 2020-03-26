@@ -13,12 +13,19 @@ function mapItems(snap) {
   return _items
 }
 
+
+/**
+ * ユーザごとのコレクションを参照
+ */
 function standardCollection(collection_name) {
   return firebase.firestore().collection(collection_name)
   .doc(store.state.user.uid)
   .collection(collection_name)
 }
 
+/**
+ * コレクションを購読してstoreにcommitする
+ */
 function onsnap_collection({collection, state_key}) {
   const cancelSnapshot = collection
     // .where("timestamp", ">=", today_zero.toDate())
