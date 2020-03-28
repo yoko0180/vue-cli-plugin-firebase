@@ -7,7 +7,7 @@ module.exports = (api, _, __, invoking) => { // eslint-disable-line no-unused-va
   if (!fs.existsSync(api.entryFile)) {
     throw Error('エントリーファイルがありません。')
   }
-  api.injectImports(api.entryFile, './firebase')
+  api.injectImports(api.entryFile, `import './firebase'`)
 
   // api.render(files => {
   //   const insert_str = `import './firebase'`
