@@ -1,6 +1,6 @@
 {
   "name": "@yoko0180/vue-cli-plugin-firebase",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "main": "index.js",
   "repository": {
     "type": "git",
