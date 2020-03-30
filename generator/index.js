@@ -14,9 +14,9 @@ module.exports = (api, _, __, invoking) => { // eslint-disable-line no-unused-va
       "build:deploy:hosting": "npm run build && firebase deploy --only hosting"
     },
     dependencies: {
-      "firebase": "latest",
-      "firebase-admin": "latest",
-      "firebase-functions": "latest"
+      "firebase": "^7.13.1",
+      "firebase-admin": "^8.10.0",
+      "firebase-functions": "^3.5.0"
     },
   })
 
